@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="javataskfactory"
+         point="de.hub.mse.ttc2020.benchmark.concretetaskfactory">
+      <task_factory
+            concrete_task_factory="nl.ru.cs.ttc2020.solution.HenshinTaskFactory">
+      </task_factory>
+   </extension>
+
+</plugin>

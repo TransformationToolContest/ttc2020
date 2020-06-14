@@ -8,7 +8,7 @@ A solution for a [case](https://github.com/lbeurerkellner/ttc2020) in the [Trans
 
 Set-up
 
-* As a prerequisite, you will need to have the Java 8 SDK installed on your system.
+* As a prerequisite, you will need to have the Java 8 SDK or higher installed on your system.
 * Download and install a recent version of the Eclipse Modeling Tools, for example, [version 2020-3](https://www.eclipse.org/downloads/packages/release/2020-03/r/eclipse-modeling-tools) distribution. If you already have a local version installed and you are able to complete the installation instructions for Henshin, then the solution should work as well.
 * In Eclipse, install the Henshin plugin.
     * *Do Help -> Install New Software...*

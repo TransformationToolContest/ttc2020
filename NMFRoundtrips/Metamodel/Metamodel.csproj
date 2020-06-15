@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="s1v1.nmeta" />
+    <None Remove="s1v2.nmeta" />
+    <None Remove="s2v1.nmeta" />
+    <None Remove="s2v2.nmeta" />
+    <None Remove="s3v1.nmeta" />
+    <None Remove="s3v2.nmeta" />
+    <None Remove="s4v1.nmeta" />
+    <None Remove="s4v2.nmeta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="s1v1.nmeta" />
+    <EmbeddedResource Include="s1v2.nmeta" />
+    <EmbeddedResource Include="s2v1.nmeta" />
+    <EmbeddedResource Include="s2v2.nmeta" />
+    <EmbeddedResource Include="s3v1.nmeta" />
+    <EmbeddedResource Include="s3v2.nmeta" />
+    <EmbeddedResource Include="s4v1.nmeta" />
+    <EmbeddedResource Include="s4v2.nmeta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NMF-Basics" Version="2.0.163" />
+  </ItemGroup>
+
+</Project>

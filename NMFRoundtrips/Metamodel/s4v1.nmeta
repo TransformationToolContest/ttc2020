@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nmeta:Namespace xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Uri="http://ttc2020/model/scenario4/1.0" Name="model" xmlns:xmi="http://www.omg.org/XMI" xmlns:nmeta="http://nmf.codeplex.com/nmeta/">
+  <Types xsi:type="nmeta:Class" IdentifierScope="Local" Identifier="#//Person/name" Name="Person">
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//String" Name="name" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//Integer" Name="age" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IdentifierScope="Local" Identifier="#//Dog/name" Name="Dog">
+    <References ReferenceType="nmeta:Class #//Person" IsOrdered="True" IsUnique="True" LowerBound="1" Name="owner" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//String" Name="name" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//Integer" Name="age" />
+  </Types>
+  <Types xsi:type="nmeta:Class" Name="Container">
+    <References IsContainment="True" ReferenceType="nmeta:Class #//Person" IsOrdered="True" IsUnique="True" LowerBound="1" Name="person" />
+    <References IsContainment="True" ReferenceType="nmeta:Class #//Dog" IsOrdered="True" IsUnique="True" LowerBound="1" Name="dog" />
+  </Types>
+</nmeta:Namespace>

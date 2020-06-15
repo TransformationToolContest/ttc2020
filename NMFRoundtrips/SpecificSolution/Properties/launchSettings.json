@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "SpecificSolution": {
+      "commandName": "Project",
+      "commandLineArgs": "scenario4-forward ..\\de.hub.mse.ttc2020.benchmark\\data\\scenario4\\instances\\input\\V1a.xmi output\\s4a-f.xml",
+      "workingDirectory": "D:\\Projekte\\ttc2020\\NMFRoundtrips"
+    }
+  }
+}

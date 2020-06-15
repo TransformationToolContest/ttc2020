@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>TTC2020.Roundtrip.GenericNMFSolution</AssemblyName>
+    <RootNamespace>TTC2020.Roundtrip.NMFSolution</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="NMF-Basics" Version="2.0.163" />
+    <PackageReference Include="NMF-Synchronizations" Version="2.0.163" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Metamodel\Metamodel.csproj" />
+  </ItemGroup>
+
+</Project>

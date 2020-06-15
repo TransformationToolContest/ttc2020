@@ -1,0 +1,5 @@
+output/
+.vs/
+**/obj/
+**/*.csproj.user
+**/bin/

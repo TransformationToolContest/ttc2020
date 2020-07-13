@@ -72,3 +72,10 @@ This will give you an overview on the verbs that are supported by this solution.
 Please note that we had to adjust the namespace URI for the NMF solution such that each metamodel has its own namespace URI because NMF does not support different metamodels with the same namespace in the same process. The namespaces already had the version moniker (V1, V2) in them and we simply added the scenario moniker.
 
 For Linux, you cannot directly run the exe but instead, you have to run it using `dotnet`, passing the dll as argument, followed by the selected verb and file paths.
+
+## Fulib Solution
+
+This solution is packaged as a Docker image. To run the solution, run the `run-fulib.sh` shell script.
+
+Once the script is done, you will find the `results.csv` file in the `solutions/fulib` folder.
+

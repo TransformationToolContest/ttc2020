@@ -22,7 +22,15 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 	public void testPerformance() throws IOException {
 		// TASK 1
 		EPackage task1_model1 = getModel(pathScenario1 + "models/V1.ecore", resSet1);
+		if (AllFunctionalTests.scenario1_pk1 != null) { 
+			task1_model1 = AllFunctionalTests.scenario1_pk1;
+			resSet1.getPackageRegistry().put(task1_model1.getNsURI(), task1_model1);
+		}
 		EPackage task1_model2 = getModel(pathScenario1 + "models/V2.ecore", resSet1);
+		if (AllFunctionalTests.scenario1_pk2 != null) { 
+			task1_model2 = AllFunctionalTests.scenario1_pk2;
+			resSet1.getPackageRegistry().put(task1_model2.getNsURI(), task1_model2);
+		}
 		EObject task1_inputV1a = getInstance(pathScenario1 + "instances/input/V1a.xmi", resSet1);
 		EObject task1_inputV1b = getInstance(pathScenario1 + "instances/input/V1b.xmi", resSet1);
 		EObject task1_inputV2a = getInstance(pathScenario1 + "instances/input/V2a.xmi", resSet1);
@@ -33,7 +41,15 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 
 		// TASK 2
 		EPackage task2_model1 = getModel(pathScenario2 + "models/V1.ecore", resSet2);
+		if (AllFunctionalTests.scenario2_pk1 != null) { 
+			task2_model1 = AllFunctionalTests.scenario2_pk1;
+			resSet2.getPackageRegistry().put(task2_model1.getNsURI(), task2_model1);
+		}
 		EPackage task2_model2 = getModel(pathScenario2 + "models/V2.ecore", resSet2);
+		if (AllFunctionalTests.scenario2_pk2 != null) { 
+			task2_model2 = AllFunctionalTests.scenario2_pk2;
+			resSet2.getPackageRegistry().put(task2_model2.getNsURI(), task2_model2);
+		}
 		EObject task2_inputV1a = getInstance(pathScenario2 + "instances/input/V1a.xmi", resSet2);
 		EObject task2_inputV1b = getInstance(pathScenario2 + "instances/input/V1b.xmi", resSet2);
 		EObject task2_inputV2a = getInstance(pathScenario2 + "instances/input/V2a.xmi", resSet2);
@@ -44,7 +60,15 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 
 		// TASK 3
 		EPackage task3_model1 = getModel(pathScenario3 + "models/V1.ecore", resSet3);
+		if (AllFunctionalTests.scenario3_pk1 != null) { 
+			task3_model1 = AllFunctionalTests.scenario3_pk1;
+			resSet3.getPackageRegistry().put(task3_model1.getNsURI(), task3_model1);
+		}
 		EPackage task3_model2 = getModel(pathScenario3 + "models/V2.ecore", resSet3);
+		if (AllFunctionalTests.scenario3_pk2 != null) { 
+			task3_model2 = AllFunctionalTests.scenario3_pk2;
+			resSet3.getPackageRegistry().put(task3_model2.getNsURI(), task3_model2);
+		}
 		EObject task3_inputV1a = getInstance(pathScenario3 + "instances/input/V1a.xmi", resSet3);
 		EObject task3_inputV1b = getInstance(pathScenario3 + "instances/input/V1b.xmi", resSet3);
 		EObject task3_inputV2a = getInstance(pathScenario3 + "instances/input/V2a.xmi", resSet3);
@@ -55,7 +79,15 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 
 		// TASK 4
 		EPackage task4_model1 = getModel(pathScenario4 + "models/V1.ecore", resSet4);
+		if (AllFunctionalTests.scenario4_pk1 != null) { 
+			task4_model1 = AllFunctionalTests.scenario4_pk1;
+			resSet4.getPackageRegistry().put(task4_model1.getNsURI(), task4_model1);
+		}
 		EPackage task4_model2 = getModel(pathScenario4 + "models/V2.ecore", resSet4);
+		if (AllFunctionalTests.scenario4_pk2 != null) { 
+			task4_model2 = AllFunctionalTests.scenario4_pk2;
+			resSet4.getPackageRegistry().put(task4_model2.getNsURI(), task4_model2);
+		}
 		EObject task4_inputV1a = getInstance(pathScenario4 + "instances/input/V1a.xmi", resSet4);
 		EObject task4_inputV1b = getInstance(pathScenario4 + "instances/input/V1b.xmi", resSet4);
 		EObject task4_inputV2a = getInstance(pathScenario4 + "instances/input/V2a.xmi", resSet4);

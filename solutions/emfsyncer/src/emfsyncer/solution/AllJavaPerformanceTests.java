@@ -14,10 +14,10 @@ public class AllJavaPerformanceTests extends PerformanceTests {
 		
 		AllFunctionalTests.taskFactory = new JavaTaskFactory();
 		
-		AllFunctionalTests.pathScenario1 = "/Users/ab373/Documents/ArturData/WORK/ECLIPSE/RESEARCH/2018_research_yamtl/ttc2020.emfsyncer/data/scenario1/";
-		AllFunctionalTests.pathScenario2 = "/Users/ab373/Documents/ArturData/WORK/ECLIPSE/RESEARCH/2018_research_yamtl/ttc2020.emfsyncer/data/scenario2/";
-		AllFunctionalTests.pathScenario3 = "/Users/ab373/Documents/ArturData/WORK/ECLIPSE/RESEARCH/2018_research_yamtl/ttc2020.emfsyncer/data/scenario3/";
-		AllFunctionalTests.pathScenario4 = "/Users/ab373/Documents/ArturData/WORK/ECLIPSE/RESEARCH/2018_research_yamtl/ttc2020.emfsyncer/data/scenario4/";
+		AllFunctionalTests.pathScenario1 = "data/scenario1/";
+		AllFunctionalTests.pathScenario2 = "data/scenario2/";
+		AllFunctionalTests.pathScenario3 = "data/scenario3/";
+		AllFunctionalTests.pathScenario4 = "data/scenario4/";
 		AllFunctionalTests.scenario1_pk1 = scenario1_v1.Scenario1_v1Package.eINSTANCE;
 		AllFunctionalTests.scenario1_pk2 = scenario1_v2.Scenario1_v2Package.eINSTANCE;
 		AllFunctionalTests.scenario2_pk1 = scenario2_v1.Scenario2_v1Package.eINSTANCE;

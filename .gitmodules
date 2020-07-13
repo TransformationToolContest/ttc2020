@@ -1,0 +1,3 @@
+[submodule "fulib.solution"]
+	path = fulib.solution
+	url = git@github.com:fujaba/ttc2020MigrationCaseByFulib.git

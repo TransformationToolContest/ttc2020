@@ -1,21 +1,21 @@
 # Henshin solution to the Round-Trip Migration Case of TTC2020
 
-A solution for a [case](https://github.com/lbeurerkellner/ttc2020) in the [Transformation Tool Contest 2020](http://www.transformation-tool-contest.eu/).
+Evaluation framework and reference solution for the TTC 2020 "Round-Trip Migration of Object-Oriented Data Model Instances" case.
 
-### Set-up ###
+## How to run the NMF Solution
 
-* As a prerequisite, you need to have the Java 8 SDK or higher installed on your system.
-* Download and install a recent version of the Eclipse Modeling Tools distribution, for example, [version 2020-3](https://www.eclipse.org/downloads/packages/release/2020-03/r/eclipse-modeling-tools). If you already have a version installed and you are able to complete the installation instructions for Henshin below, you should be able to use the solution as well.
-* In Eclipse, install the Henshin plugin.
-    * *Do Help -> Install New Software...*
-    * Under *Work with...* enter the Nightly update site: http://download.eclipse.org/modeling/emft/henshin/updates/nightly
-    * After the installation, restart Eclipse.
-* Use the Git perspective to duplicate this repository to your local system, and to import the contained projects into your Eclipse workspace. The projects should compile automatically without errors.
+The NMF solution is already precompiled in the repository. In order to run it, you need to have the .NET Core 3.1 runtime installed. Please visit [https://dotnet.microsoft.com/download] for instructions how to do that.
 
-### Usage ###
+In order to run the solution, you may either run the specific or the generic solution executable. Both of them require the same commandline arguments and are started similarly.
 
-The solution artifacts are contained  in the *nl.ru.cs.ttc2020.solution* project.
+For Windows, simply execute 
+```
+NMFRoundtrips\GenericSolution\bin\Release\netcoreapp3.1\publish\TTC2020.Roundtrip.GenericNMFSolution.exe
+NMFRoundtrips\SpecificSolution\bin\Release\netcoreapp3.1\publish\TTC2020.Roundtrip.NMFSolution.exe
+```
 
-* To reproduce the functionality and performance tests, use the classes *AllHenshinFunctionalTests*  and *AllHenshinPerformanceTests* in the  package *nl.ru.cs.ttc2020.solution*  of the project of the same name. Right-click -> "Run as JUnit Test"  (and not as JUnit Plug-In Test, which generally takes much longer) worked on the example system.
-* To inspect the transformation specifications, open the *.henshin_diagram* files in the folder *rules*. 
-* To inspect the glue code, inspect the classes *HenshinTaskFactory* and *HenshinTask* in the source folder *src*.
+This will give you an overview on the verbs that are supported by this solution. Each verb will execute one of the scenarios either forward (meaning that a V1 instance is migrated to V2 and back again) or backward (meaning that a V2 instance is migrated to V1 and back again). Each verb requires two arguments that specify which instance should be loaded and where the output should be written to.
+
+Please note that we had to adjust the namespace URI for the NMF solution such that each metamodel has its own namespace URI because NMF does not support different metamodels with the same namespace in the same process. The namespaces already had the version moniker (V1, V2) in them and we simply added the scenario moniker.
+
+For linux, you cannot directly run the exe but instead, you have to run it using `dotnet`, passing the dll as argument, followed by the selected verb and file paths.

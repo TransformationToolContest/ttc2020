@@ -11,10 +11,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.junit.Test;
 
 public class PerformanceTests extends AbstractBenchmarkTests {
-	/** total number of repetitions */
-	private static final int TOTAL_REPETITIONS = 2000000;
 	/** interval at which we measure the passed time since the beginning. */
-	private static final int MEASURMENT_INTERVAL = 10000;
+	private static final int MEASURMENT_INTERVAL = 10_000;
 	/** number of non-measured warm-up iterations */
 	private static final int WARM_UP_ITERATIONS = 100;
 
@@ -100,7 +98,7 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 		long startTime = 0;
 		Map<Integer, Long> measurements = new HashMap<Integer, Long>();
 		
-		for (int i = 0; i < TOTAL_REPETITIONS + WARM_UP_ITERATIONS; i++) {
+		for (int i = 0; i < getTotalIterations() + WARM_UP_ITERATIONS; i++) {
 			if (i == WARM_UP_ITERATIONS) {
 				startTime = System.nanoTime();
 			}
@@ -176,5 +174,10 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 		}
 		
 		
+	}
+
+	public int getTotalIterations() {
+		/** total number of repetitions */
+		return 2_000_000;
 	}
 }

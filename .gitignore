@@ -1,3 +1,9 @@
 # Java class files
 *.class
 runtime.pdf
+
+# Python virtualenv
+venv
+
+# Solution results.csv (use results/ instead)
+*solution*/**/results.csv

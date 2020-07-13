@@ -19,4 +19,12 @@ public class AllHenshinPerformanceTests extends PerformanceTests {
 		AllFunctionalTests.pathScenario3 = "../../de.hub.mse.ttc2020.benchmark/data/scenario3/";
 		AllFunctionalTests.pathScenario4 = "../../de.hub.mse.ttc2020.benchmark/data/scenario4/";
 	}
+
+	@Override
+	public int getTotalIterations() {
+		// Reduce the max number of iterations for Henshin
+		return 500_000;
+	}
+
+	
 }

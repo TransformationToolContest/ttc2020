@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Reference Solution for the TTC2020 Round-Trip Migration Case
+Bundle-SymbolicName: nl.ru.cs.ttc2020.solution;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: de.hub.mse.ttc2020.solution
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.junit,
+ de.hub.mse.ttc2020.benchmark,
+ org.eclipse.emf.henshin.interpreter,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.henshin.model

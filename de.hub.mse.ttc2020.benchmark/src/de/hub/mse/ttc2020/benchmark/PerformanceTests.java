@@ -21,45 +21,45 @@ public class PerformanceTests extends AbstractBenchmarkTests {
 	@Test
 	public void testPerformance() throws IOException {
 		// TASK 1
-		EPackage task1_model1 = getModel(pathScenario1 + "models/V1.ecore");
-		EPackage task1_model2 = getModel(pathScenario1 + "models/V2.ecore");
-		EObject task1_inputV1a = getInstance(pathScenario1 + "instances/input/V1a.xmi");
-		EObject task1_inputV1b = getInstance(pathScenario1 + "instances/input/V1b.xmi");
-		EObject task1_inputV2a = getInstance(pathScenario1 + "instances/input/V2a.xmi");
-		EObject task1_inputV2b = getInstance(pathScenario1 + "instances/input/V2b.xmi");
+		EPackage task1_model1 = getModel(pathScenario1 + "models/V1.ecore", resSet1);
+		EPackage task1_model2 = getModel(pathScenario1 + "models/V2.ecore", resSet1);
+		EObject task1_inputV1a = getInstance(pathScenario1 + "instances/input/V1a.xmi", resSet1);
+		EObject task1_inputV1b = getInstance(pathScenario1 + "instances/input/V1b.xmi", resSet1);
+		EObject task1_inputV2a = getInstance(pathScenario1 + "instances/input/V2a.xmi", resSet1);
+		EObject task1_inputV2b = getInstance(pathScenario1 + "instances/input/V2b.xmi", resSet1);
 
 		AbstractTask task1_1_2_1 = taskFactory.createTask(TaskInfo.TASK_1_M1_M2_M1, task1_model1, task1_model2);
 		AbstractTask task1_2_1_2 = taskFactory.createTask(TaskInfo.TASK_1_M2_M1_M2, task1_model1, task1_model2);
 
 		// TASK 2
-		EPackage task2_model1 = getModel(pathScenario2 + "models/V1.ecore");
-		EPackage task2_model2 = getModel(pathScenario2 + "models/V2.ecore");
-		EObject task2_inputV1a = getInstance(pathScenario2 + "instances/input/V1a.xmi");
-		EObject task2_inputV1b = getInstance(pathScenario2 + "instances/input/V1b.xmi");
-		EObject task2_inputV2a = getInstance(pathScenario2 + "instances/input/V2a.xmi");
-		EObject task2_inputV2b = getInstance(pathScenario2 + "instances/input/V2b.xmi");
+		EPackage task2_model1 = getModel(pathScenario2 + "models/V1.ecore", resSet2);
+		EPackage task2_model2 = getModel(pathScenario2 + "models/V2.ecore", resSet2);
+		EObject task2_inputV1a = getInstance(pathScenario2 + "instances/input/V1a.xmi", resSet2);
+		EObject task2_inputV1b = getInstance(pathScenario2 + "instances/input/V1b.xmi", resSet2);
+		EObject task2_inputV2a = getInstance(pathScenario2 + "instances/input/V2a.xmi", resSet2);
+		EObject task2_inputV2b = getInstance(pathScenario2 + "instances/input/V2b.xmi", resSet2);
 
 		AbstractTask task2_1_2_1 = taskFactory.createTask(TaskInfo.TASK_2_M1_M2_M1, task2_model1, task2_model2);
 		AbstractTask task2_2_1_2 = taskFactory.createTask(TaskInfo.TASK_2_M2_M1_M2, task2_model1, task2_model2);
 
 		// TASK 3
-		EPackage task3_model1 = getModel(pathScenario3 + "models/V1.ecore");
-		EPackage task3_model2 = getModel(pathScenario3 + "models/V2.ecore");
-		EObject task3_inputV1a = getInstance(pathScenario3 + "instances/input/V1a.xmi");
-		EObject task3_inputV1b = getInstance(pathScenario3 + "instances/input/V1b.xmi");
-		EObject task3_inputV2a = getInstance(pathScenario3 + "instances/input/V2a.xmi");
-		EObject task3_inputV2b = getInstance(pathScenario3 + "instances/input/V2b.xmi");
+		EPackage task3_model1 = getModel(pathScenario3 + "models/V1.ecore", resSet3);
+		EPackage task3_model2 = getModel(pathScenario3 + "models/V2.ecore", resSet3);
+		EObject task3_inputV1a = getInstance(pathScenario3 + "instances/input/V1a.xmi", resSet3);
+		EObject task3_inputV1b = getInstance(pathScenario3 + "instances/input/V1b.xmi", resSet3);
+		EObject task3_inputV2a = getInstance(pathScenario3 + "instances/input/V2a.xmi", resSet3);
+		EObject task3_inputV2b = getInstance(pathScenario3 + "instances/input/V2b.xmi", resSet3);
 
 		AbstractTask task3_1_2_1 = taskFactory.createTask(TaskInfo.TASK_3_M1_M2_M1, task3_model1, task3_model2);
 		AbstractTask task3_2_1_2 = taskFactory.createTask(TaskInfo.TASK_3_M2_M1_M2, task3_model1, task3_model2);
 
 		// TASK 4
-		EPackage task4_model1 = getModel(pathScenario4 + "models/V1.ecore");
-		EPackage task4_model2 = getModel(pathScenario4 + "models/V2.ecore");
-		EObject task4_inputV1a = getInstance(pathScenario4 + "instances/input/V1a.xmi");
-		EObject task4_inputV1b = getInstance(pathScenario4 + "instances/input/V1b.xmi");
-		EObject task4_inputV2a = getInstance(pathScenario4 + "instances/input/V2a.xmi");
-		EObject task4_inputV2b = getInstance(pathScenario4 + "instances/input/V2b.xmi");
+		EPackage task4_model1 = getModel(pathScenario4 + "models/V1.ecore", resSet4);
+		EPackage task4_model2 = getModel(pathScenario4 + "models/V2.ecore", resSet4);
+		EObject task4_inputV1a = getInstance(pathScenario4 + "instances/input/V1a.xmi", resSet4);
+		EObject task4_inputV1b = getInstance(pathScenario4 + "instances/input/V1b.xmi", resSet4);
+		EObject task4_inputV2a = getInstance(pathScenario4 + "instances/input/V2a.xmi", resSet4);
+		EObject task4_inputV2b = getInstance(pathScenario4 + "instances/input/V2b.xmi", resSet4);
 
 		AbstractTask task4_1_2_1 = taskFactory.createTask(TaskInfo.TASK_4_M1_M2_M1, task4_model1, task4_model2);
 		AbstractTask task4_2_1_2 = taskFactory.createTask(TaskInfo.TASK_4_M2_M1_M2, task4_model1, task4_model2);

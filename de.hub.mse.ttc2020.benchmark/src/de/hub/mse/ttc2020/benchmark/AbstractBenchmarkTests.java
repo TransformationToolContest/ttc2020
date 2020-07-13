@@ -46,7 +46,10 @@ public abstract class AbstractBenchmarkTests {
 	protected static String pathScenario3 = "data/scenario3/";
 	protected static String pathScenario4 = "data/scenario4/";
 	
-	protected static ResourceSet resSet;
+	protected static ResourceSet resSet1;	
+	protected static ResourceSet resSet2;	
+	protected static ResourceSet resSet3;	
+	protected static ResourceSet resSet4;
 	
 	@BeforeClass
 	public static void init() throws CoreException {
@@ -61,7 +64,10 @@ public abstract class AbstractBenchmarkTests {
 			}
 		}
 
-		resSet = new ResourceSetImpl();
+		resSet1 = new ResourceSetImpl();
+		resSet2 = new ResourceSetImpl();
+		resSet3 = new ResourceSetImpl();
+		resSet4 = new ResourceSetImpl();
 
 		// Initialize EMF resource factories
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
@@ -73,7 +79,7 @@ public abstract class AbstractBenchmarkTests {
 		Logger.getRootLogger().setLevel(Level.OFF);
 	}
 	
-	protected EPackage getModel(String path) throws IOException {
+	protected EPackage getModel(String path, ResourceSet resSet) throws IOException {
 		Resource resource = resSet.getResource(URI.createURI(path), true);
 		resource.load(Collections.EMPTY_MAP);
 		EPackage model = (EPackage) resource.getContents().get(0);
@@ -81,10 +87,18 @@ public abstract class AbstractBenchmarkTests {
 		return model;
 	}
 
-	protected EObject getInstance(String path) throws IOException {
+	protected EObject getInstance(String path, ResourceSet resSet) throws IOException {
 		Resource resource = resSet.getResource(URI.createURI(path), true);
 		resource.load(Collections.EMPTY_MAP);
 		return resource.getContents().get(0);
+	}
+	
+	protected EPackage getModel(String path) throws IOException {
+		return getModel(path, resSet1);
+	}
+
+	protected EObject getInstance(String path) throws IOException {
+		return getInstance(path, resSet1);
 	}
 
 	protected boolean isEqual(EObject out, EObject expout) {

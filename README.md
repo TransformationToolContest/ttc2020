@@ -1,15 +1,21 @@
-# TTC2020
+# Henshin solution to the Round-Trip Migration Case of TTC2020
 
-Evaluation framework and reference solution for the TTC 2020 "Round-Trip Migration of Object-Oriented Data Model Instances" case.
+A solution for a [case](https://github.com/lbeurerkellner/ttc2020) in the [Transformation Tool Contest 2020](http://www.transformation-tool-contest.eu/).
 
-## Performance Evaluation
+### Set-up ###
 
-To use the provided plotting scripts, make sure your Python environment provides the dependencies listed in `requirements.txt`.
+* As a prerequisite, you need to have the Java 8 SDK or higher installed on your system.
+* Download and install a recent version of the Eclipse Modeling Tools distribution, for example, [version 2020-3](https://www.eclipse.org/downloads/packages/release/2020-03/r/eclipse-modeling-tools). If you already have a version installed and you are able to complete the installation instructions for Henshin below, you should be able to use the solution as well.
+* In Eclipse, install the Henshin plugin.
+    * *Do Help -> Install New Software...*
+    * Under *Work with...* enter the Nightly update site: http://download.eclipse.org/modeling/emft/henshin/updates/nightly
+    * After the installation, restart Eclipse.
+* Use the Git perspective to duplicate this repository to your local system, and to import the contained projects into your Eclipse workspace. The projects should compile automatically without errors.
 
-To plot the runtime results of the reference solution using the plotting script, execute the following command. Make sure to execute the corresponding `AllJavaPerformanceTests` JUnit test beforehand, which creates the `results.csv` file.
+### Usage ###
 
-```python
-python plot.py de.hub.mse.ttc2020.solution/results.csv
-```
+The solution artifacts are contained  in the *nl.ru.cs.ttc2020.solution* project.
 
-The resulting plot will be saved to the file `./runtime.pdf`.
+* To reproduce the functionality and performance tests, use the classes *AllHenshinFunctionalTests*  and *AllHenshinPerformanceTests* in the  package *nl.ru.cs.ttc2020.solution*  of the project of the same name. Right-click -> "Run as JUnit Test"  (and not as JUnit Plug-In Test, which generally takes much longer) worked on the example system.
+* To inspect the transformation specifications, open the *.henshin_diagram* files in the folder *rules*. 
+* To inspect the glue code, inspect the classes *HenshinTaskFactory* and *HenshinTask* in the source folder *src*.

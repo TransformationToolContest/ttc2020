@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ttc2020.emfsyncer/src" modelPluginID="ttc2020.emfsyncer"
+    modelName="V2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>V2.ecore</foreignModel>
+  <genPackages prefix="Scenario4_v2" disposableProviderFactory="true" ecorePackage="V2.ecore#/">
+    <genClasses ecoreClass="V2.ecore#//Person"/>
+    <genClasses ecoreClass="V2.ecore#//Dog">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute V2.ecore#//Dog/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference V2.ecore#//Dog/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="V2.ecore#//Container">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference V2.ecore#//Container/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference V2.ecore#//Container/dog"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Scenario2_v2" ecorePackage="V21.ecore#/">
+    <genClasses ecoreClass="V21.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute V21.ecore#//Person/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute V21.ecore#//Person/ybirth"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

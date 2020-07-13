@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated V1 -->
+      <package
+            uri="http://ttc2020/scenario4/model/1.0"
+            class="scenario4_v1.Scenario4_v1Package"
+            genModel="data/scenario4/models/V1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated V1 -->
+      <package
+            uri="http://ttc2020/scenario2/model/1.0"
+            class="scenario2_v1.Scenario2_v1Package"
+            genModel="data/scenario4/models/V1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated V2 -->
+      <package
+            uri="http://ttc2020/scenario1/model/2.0"
+            class="scenario1_v2.Scenario1_v2Package"
+            genModel="data/scenario1/models/V2.genmodel"/>
+   </extension>
+
+</plugin>

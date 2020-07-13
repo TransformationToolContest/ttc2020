@@ -3,5 +3,5 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://ttc2020/model/scenario3/2.0"
-    xsi:schemaLocation="http://ttc2020/model/2.0 ../../models/V2.ecore"   
+    xsi:schemaLocation="http://ttc2020/model/scenario3/2.0 ../../models/V2.ecore"   
     age="25"/>

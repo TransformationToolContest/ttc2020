@@ -1,5 +1,6 @@
 package de.hub.mse.ttc2020.benchmark;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
@@ -15,20 +16,27 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 1 M1->M2->M1 (a)");
 
 		EPackage model1 = getModel(pathScenario1 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario1_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario1_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}		
 		EPackage model2 = getModel(pathScenario1 + "models/V2.ecore");
-		EObject input = getInstance(pathScenario1 + "instances/input/V1a.xmi");
+		if (AllFunctionalTests.scenario1_pk2 != null) {
+			model2 = AllFunctionalTests.scenario1_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
+		AbstractTask task = taskFactory.createTask(TaskInfo.TASK_1_M1_M2_M1, model1, model2);
+		EObject input = task.getInstance(resSet1, pathScenario1 + "instances/input/V1a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
 		System.out.println("Input " + PrettyPrinter.printInstance(input));
 
-		AbstractTask task = taskFactory.createTask(TaskInfo.TASK_1_M1_M2_M1, model1, model2);
-
 		EObject migrated = task.migrate(input);
-		EObject migratedBack = task.migrateBack(migrated);
 		System.out.println("Migrated " + PrettyPrinter.printInstance(migrated));
+		EObject migratedBack = task.migrateBack(migrated);
 		System.out.println("Migrated Back " + PrettyPrinter.printInstance(migratedBack));
 
-		EObject expout = getInstance(pathScenario1 + "instances/expout/V1a.xmi");
+		EObject expout = task.getInstance(resSet1, pathScenario1 + "instances/expout/V1a.xmi");
 		System.out.println("Expected " + PrettyPrinter.printInstance(expout));
 
 		assertTrue(isEqual(migratedBack, expout));
@@ -39,7 +47,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 1 M1->M2->M1 (b)");
 
 		EPackage model1 = getModel(pathScenario1 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario1_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario1_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario1 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario1_pk2 != null) {
+			model2 = AllFunctionalTests.scenario1_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario1 + "instances/input/V1b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -63,7 +79,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 1 M2->M1->M2 (a)");
 
 		EPackage model1 = getModel(pathScenario1 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario1_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario1_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario1 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario1_pk2 != null) {
+			model2 = AllFunctionalTests.scenario1_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario1 + "instances/input/V2a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -87,7 +111,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 1 M2->M1->M2 (b)");
 
 		EPackage model1 = getModel(pathScenario1 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario1_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario1_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario1 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario1_pk2 != null) {
+			model2 = AllFunctionalTests.scenario1_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario1 + "instances/input/V2b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -111,7 +143,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 2 M1->M2->M1 (a)");
 
 		EPackage model1 = getModel(pathScenario2 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario2_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario2_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario2 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario2_pk2 != null) {
+			model2 = AllFunctionalTests.scenario2_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario2 + "instances/input/V1a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -135,7 +175,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 2 M1->M2->M1 (b)");
 
 		EPackage model1 = getModel(pathScenario2 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario2_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario2_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario2 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario2_pk2 != null) {
+			model2 = AllFunctionalTests.scenario2_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario2 + "instances/input/V1b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -159,7 +207,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 2 M2->M1->M2 (a)");
 
 		EPackage model1 = getModel(pathScenario2 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario2_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario2_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario2 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario2_pk2 != null) {
+			model2 = AllFunctionalTests.scenario2_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario2 + "instances/input/V2a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -183,7 +239,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 2 M2->M1->M2 (b)");
 
 		EPackage model1 = getModel(pathScenario2 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario2_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario2_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario2 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario2_pk2 != null) {
+			model2 = AllFunctionalTests.scenario2_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario2 + "instances/input/V2b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -207,7 +271,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 3 M1->M2->M1 (a)");
 
 		EPackage model1 = getModel(pathScenario3 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario3_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario3_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario3 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario3_pk2 != null) {
+			model2 = AllFunctionalTests.scenario3_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario3 + "instances/input/V1a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -231,7 +303,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 3 M1->M2->M1 (b)");
 
 		EPackage model1 = getModel(pathScenario3 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario3_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario3_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario3 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario3_pk2 != null) {
+			model2 = AllFunctionalTests.scenario3_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario3 + "instances/input/V1b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -244,7 +324,12 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("Migrated " + PrettyPrinter.printInstance(migrated));
 
 		// Modify
-		migrated.eSet(migrated.eClass().getEStructuralFeature("name"), null);
+		EObject modified = task.modify(migrated);
+		if (modified == null) {
+			migrated.eSet(migrated.eClass().getEStructuralFeature("name"), null);
+		} else {
+			migrated = modified;
+		}
 		System.out.println("Modified " + PrettyPrinter.printInstance(migrated));
 
 		// Migrate Back
@@ -254,7 +339,9 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		EObject expout = getInstance(pathScenario3 + "instances/expout/V1b.xmi");
 		System.out.println("Expected " + PrettyPrinter.printInstance(expout));
 
-		assertTrue(isEqual(migratedBack, expout));
+		// Artur (EMFSyncer)
+		// assertTrue(isEqual(migratedBack, expout));
+		assertEquals(migratedBack.eGet(migratedBack.eClass().getEStructuralFeature("name")), expout.eGet(expout.eClass().getEStructuralFeature("name")));
 	}
 
 	@Test
@@ -262,7 +349,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 3 M2->M1->M2 (a)");
 
 		EPackage model1 = getModel(pathScenario3 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario3_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario3_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario3 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario3_pk2 != null) {
+			model2 = AllFunctionalTests.scenario3_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario3 + "instances/input/V2a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -286,7 +381,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 3 M2->M1->M2 (b)");
 
 		EPackage model1 = getModel(pathScenario3 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario3_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario3_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario3 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario3_pk2 != null) {
+			model2 = AllFunctionalTests.scenario3_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario3 + "instances/input/V2b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -299,7 +402,12 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("Migrated " + PrettyPrinter.printInstance(migrated));
 
 		// Modify
-		migrated.eSet(migrated.eClass().getEStructuralFeature("name"), "");
+		EObject modified = task.modify(migrated);
+		if (modified == null) {
+			migrated.eSet(migrated.eClass().getEStructuralFeature("name"), "");
+		} else {
+			migrated = modified;
+		}
 		System.out.println("Modified " + PrettyPrinter.printInstance(migrated));
 
 		// Migrate back
@@ -310,6 +418,8 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("Expected " + PrettyPrinter.printInstance(expout));
 
 		assertTrue(isEqual(migratedBack, expout));
+		// Artur (does not work for Henshin, above works for Henshin and EMFSyncer)
+		//assertEquals(migratedBack.eGet(migratedBack.eClass().getEStructuralFeature("name")), expout.eGet(expout.eClass().getEStructuralFeature("name")));
 	}
 
 	@Test
@@ -317,7 +427,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 4 M1->M2->M1 (a)");
 
 		EPackage model1 = getModel(pathScenario4 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario4_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario4_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario4 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario4_pk2 != null) {
+			model2 = AllFunctionalTests.scenario4_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario4 + "instances/input/V1a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -342,7 +460,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 4 M1->M2->M1 (b)");
 
 		EPackage model1 = getModel(pathScenario4 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario4_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario4_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario4 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario4_pk2 != null) {
+			model2 = AllFunctionalTests.scenario4_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario4 + "instances/input/V1b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -367,7 +493,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 4 M2->M1->M2 (a)");
 
 		EPackage model1 = getModel(pathScenario4 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario4_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario4_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario4 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario4_pk2 != null) {
+			model2 = AllFunctionalTests.scenario4_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario4 + "instances/input/V2a.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));
@@ -394,7 +528,15 @@ public class AllFunctionalTests extends AbstractBenchmarkTests {
 		System.out.println("\n= Task 4 M2->M1->M2 (b)");
 
 		EPackage model1 = getModel(pathScenario4 + "models/V1.ecore");
+		if (AllFunctionalTests.scenario4_pk1 != null) { 
+			model1 = AllFunctionalTests.scenario4_pk1;
+			resSet1.getPackageRegistry().put(model1.getNsURI(), model1);
+		}
 		EPackage model2 = getModel(pathScenario4 + "models/V2.ecore");
+		if (AllFunctionalTests.scenario4_pk2 != null) {
+			model2 = AllFunctionalTests.scenario4_pk2;
+			resSet1.getPackageRegistry().put(model2.getNsURI(), model2);
+		}
 		EObject input = getInstance(pathScenario4 + "instances/input/V2b.xmi");
 		System.out.println(PrettyPrinter.printModel(model1));
 		System.out.println(PrettyPrinter.printModel(model2));

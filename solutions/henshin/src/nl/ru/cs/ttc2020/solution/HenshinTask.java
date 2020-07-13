@@ -94,4 +94,10 @@ public class HenshinTask extends AbstractTask {
 		M1_M2_M1, M2_M1_M2
 	}
 
+	@Override
+	public EObject modify(EObject instance) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

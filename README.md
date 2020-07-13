@@ -22,7 +22,7 @@ The resulting plot will be saved to the file `./runtime.pdf`.
 
 ### Installation guide
 
-* Download [Eclipse IDE for Java and DSL Developers](https://www.eclipse.org/downloads/packages/)
+* Download [Eclipse IDE for Java and DSL Developers](https://www.eclipse.org/downloads/packages/). If you use a standard Modelling install, you will need to install support from Xtend as well from your main update site.
 * Install EMF Compare 3.3 from the update site `https://download.eclipse.org/modeling/emf/compare/updates/releases/3.3/` and restart Eclipse. 
 * Install AJDT for Eclipse 4.10, from the update site `http://download.eclipse.org/tools/ajdt/410/dev/update` and restart Eclipse.
 

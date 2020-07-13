@@ -45,7 +45,16 @@ public abstract class AbstractBenchmarkTests {
 	protected static String pathScenario2 = "data/scenario2/";
 	protected static String pathScenario3 = "data/scenario3/";
 	protected static String pathScenario4 = "data/scenario4/";
-	
+
+	protected static EPackage scenario1_pk1; 
+	protected static EPackage scenario1_pk2; 
+	protected static EPackage scenario2_pk1; 
+	protected static EPackage scenario2_pk2; 
+	protected static EPackage scenario3_pk1; 
+	protected static EPackage scenario3_pk2; 
+	protected static EPackage scenario4_pk1; 
+	protected static EPackage scenario4_pk2; 
+
 	protected static ResourceSet resSet1;	
 	protected static ResourceSet resSet2;	
 	protected static ResourceSet resSet3;	

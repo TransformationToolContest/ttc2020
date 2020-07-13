@@ -1,8 +1,13 @@
 package de.hub.mse.ttc2020.benchmark;
 
+import java.io.IOException;
+import java.util.Collections;
+
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 
 public abstract class AbstractTask {
 
@@ -22,7 +27,18 @@ public abstract class AbstractTask {
 		return model2;
 	}
 
+	public EObject modify(EObject instance) {
+		// do nothing - needed by EMFSyncer solution
+		return null;
+	}
+
 	public abstract EObject migrate(EObject instance);
 
 	public abstract EObject migrateBack(EObject instance);
+
+	public EObject getInstance(ResourceSet resSet, String path) throws IOException {
+		Resource resource = resSet.getResource(URI.createURI(path), true);
+		resource.load(Collections.EMPTY_MAP);
+		return resource.getContents().get(0);
+	}
 }

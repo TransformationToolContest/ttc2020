@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_kSlRwK1OEeqjAMxkL65YuA">
-  <imports href="http://ttc2020/model/1.0#/"/>
-  <imports href="http://ttc2020/model/2.0#/"/>
+  <imports href="http://ttc2020/model/scenario1/1.0#/"/>
+  <imports href="http://ttc2020/model/scenario1/2.0#/"/>
   <units xsi:type="henshin:Rule" xmi:id="_3eQVK61REeqjAMxkL65YuA" name="migrate">
     <parameters xmi:id="_3eQVLa1REeqjAMxkL65YuA" name="instance2" kind="IN"/>
     <parameters xmi:id="_3eQVLK1REeqjAMxkL65YuA" name="instance1" kind="OUT"/>
     <parameters xmi:id="_3eQVLq1REeqjAMxkL65YuA" name="n" kind="VAR"/>
     <lhs xmi:id="_3eQVL61REeqjAMxkL65YuA" name="Lhs">
       <nodes xmi:id="_3eQVNa1REeqjAMxkL65YuA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/2.0#//Person"/>
         <attributes xmi:id="_3eQVNq1REeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/name"/>
         </attributes>
       </nodes>
     </lhs>
     <rhs xmi:id="_3eQVMq1REeqjAMxkL65YuA" name="Rhs">
       <nodes xmi:id="_3eQVMK1REeqjAMxkL65YuA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/1.0#//Person"/>
         <attributes xmi:id="_3eQVMa1REeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/1.0#//Person/name"/>
         </attributes>
       </nodes>
       <nodes xmi:id="__G79sK1REeqjAMxkL65YuA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/2.0#//Person"/>
         <attributes xmi:id="__G79sa1REeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/name"/>
         </attributes>
       </nodes>
     </rhs>
@@ -38,38 +38,38 @@
     <parameters xmi:id="_b64mAK1ZEeqEBLCGMxk2aA" name="a" kind="VAR"/>
     <lhs xmi:id="_Neem1K1ZEeqEBLCGMxk2aA" name="Lhs">
       <nodes xmi:id="_Neem2K1ZEeqEBLCGMxk2aA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/1.0#//Person"/>
         <attributes xmi:id="_Neem2a1ZEeqEBLCGMxk2aA" value="n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/1.0#//Person/name"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_oT-CkK1ZEeqEBLCGMxk2aA" name="trace">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/2.0#//Person"/>
         <attributes xmi:id="_3xgHkK1ZEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/age"/>
         </attributes>
       </nodes>
     </lhs>
     <rhs xmi:id="_Neem161ZEeqEBLCGMxk2aA" name="Rhs">
       <nodes xmi:id="_Neem1a1ZEeqEBLCGMxk2aA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/2.0#//Person"/>
         <attributes xmi:id="_Neem1q1ZEeqEBLCGMxk2aA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/name"/>
         </attributes>
         <attributes xmi:id="_4miSIK1ZEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/age"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_dnTEgK1ZEeqEBLCGMxk2aA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/1.0#//Person"/>
         <attributes xmi:id="_dnTEga1ZEeqEBLCGMxk2aA" value="n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario1/1.0#//Person/name"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_oT-poK1ZEeqEBLCGMxk2aA" name="trace">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario1/2.0#//Person"/>
         <attributes xmi:id="_3xjx8K1ZEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+          <type href="http://ttc2020/model/scenario1/2.0#//Person/age"/>
         </attributes>
       </nodes>
     </rhs>

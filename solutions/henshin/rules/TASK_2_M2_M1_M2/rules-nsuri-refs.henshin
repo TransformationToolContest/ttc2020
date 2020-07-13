@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_kSlRwK1OEeqjAMxkL65YuA">
-  <imports href="http://ttc2020/model/1.0#/"/>
-  <imports href="http://ttc2020/model/2.0#/"/>
-  <units xsi:type="henshin:Rule" xmi:id="_5hffgK1OEeqjAMxkL65YuA" name="migrate">
+  <imports href="http://ttc2020/model/scenario2/2.0#/"/>
+  <imports href="http://ttc2020/model/scenario2/1.0#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_5hffgK1OEeqjAMxkL65YuA" name="migrateBack">
     <parameters xmi:id="_Br8YcK1PEeqjAMxkL65YuA" name="instance1" kind="IN"/>
     <parameters xmi:id="_Br8Yca1PEeqjAMxkL65YuA" name="instance2" kind="OUT"/>
     <parameters xmi:id="_aLsE0K1PEeqjAMxkL65YuA" name="n" kind="VAR"/>
-    <parameters xmi:id="_f39JcK1iEeqEBLCGMxk2aA" name="a" kind="VAR"/>
+    <parameters xmi:id="_2JAbkK1gEeqEBLCGMxk2aA" name="a" kind="VAR"/>
     <lhs xmi:id="_5iV0EK1OEeqjAMxkL65YuA" name="Lhs">
       <nodes xmi:id="_8qcNcK1OEeqjAMxkL65YuA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
+        <type href="http://ttc2020/model/scenario2/1.0#//Person"/>
         <attributes xmi:id="_W9Go8K1PEeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_qxhUAK1iEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/1.0#//Person/age"/>
+        <attributes xmi:id="_SKPHIK1gEeqEBLCGMxk2aA" value="a">
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/age"/>
         </attributes>
       </nodes>
     </lhs>
     <rhs xmi:id="_5iV0Ea1OEeqjAMxkL65YuA" name="Rhs">
       <nodes xmi:id="_8qeCoK1OEeqjAMxkL65YuA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
+        <type href="http://ttc2020/model/scenario2/1.0#//Person"/>
         <attributes xmi:id="_W9KTUK1PEeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_qxhUAa1iEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/1.0#//Person/age"/>
+        <attributes xmi:id="_SKPHIa1gEeqEBLCGMxk2aA" value="a">
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/age"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_S56gUK1PEeqjAMxkL65YuA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario2/2.0#//Person"/>
         <attributes xmi:id="_qgTi0K1PEeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_ym0W8K1PEeqjAMxkL65YuA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+        <attributes xmi:id="_ST-R8K1gEeqEBLCGMxk2aA" value="new Date().getFullYear()-a">
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/ybirth"/>
         </attributes>
       </nodes>
     </rhs>
     <mappings xmi:id="_8qfQwK1OEeqjAMxkL65YuA" origin="_8qcNcK1OEeqjAMxkL65YuA" image="_8qeCoK1OEeqjAMxkL65YuA"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_3eQVK61REeqjAMxkL65YuA" name="migrateBack">
+  <units xsi:type="henshin:Rule" xmi:id="_3eQVK61REeqjAMxkL65YuA" name="migrate">
     <parameters xmi:id="_3eQVLa1REeqjAMxkL65YuA" name="instance2" kind="IN"/>
     <parameters xmi:id="_3eQVLK1REeqjAMxkL65YuA" name="instance1" kind="OUT"/>
     <parameters xmi:id="_3eQVLq1REeqjAMxkL65YuA" name="n" kind="VAR"/>
-    <parameters xmi:id="_iPSNMK1iEeqEBLCGMxk2aA" name="a" kind="VAR"/>
+    <parameters xmi:id="_5GzCYK1gEeqEBLCGMxk2aA" name="y" kind="VAR"/>
     <lhs xmi:id="_3eQVL61REeqjAMxkL65YuA" name="Lhs">
       <nodes xmi:id="_3eQVNa1REeqjAMxkL65YuA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario2/2.0#//Person"/>
         <attributes xmi:id="_3eQVNq1REeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_xuefEK1iEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+        <attributes xmi:id="_-T8csK1gEeqEBLCGMxk2aA" value="y">
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/ybirth"/>
         </attributes>
       </nodes>
     </lhs>
     <rhs xmi:id="_3eQVMq1REeqjAMxkL65YuA" name="Rhs">
       <nodes xmi:id="_3eQVMK1REeqjAMxkL65YuA" name="instance1">
-        <type href="http://ttc2020/model/1.0#//Person"/>
-        <attributes xmi:id="_3eQVMa1REeqjAMxkL65YuA" value="(n==null)?&quot;&quot;:n">
-          <type href="http://ttc2020/model/1.0#//Person/name"/>
+        <type href="http://ttc2020/model/scenario2/1.0#//Person"/>
+        <attributes xmi:id="_3eQVMa1REeqjAMxkL65YuA" value="n">
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_xEg8EK1iEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/1.0#//Person/age"/>
+        <attributes xmi:id="_5wWVsK1gEeqEBLCGMxk2aA" value="new Date().getFullYear()-y">
+          <type href="http://ttc2020/model/scenario2/1.0#//Person/age"/>
         </attributes>
       </nodes>
       <nodes xmi:id="__G79sK1REeqjAMxkL65YuA" name="instance2">
-        <type href="http://ttc2020/model/2.0#//Person"/>
+        <type href="http://ttc2020/model/scenario2/2.0#//Person"/>
         <attributes xmi:id="__G79sa1REeqjAMxkL65YuA" value="n">
-          <type href="http://ttc2020/model/2.0#//Person/name"/>
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/name"/>
         </attributes>
-        <attributes xmi:id="_xuefEa1iEeqEBLCGMxk2aA" value="a">
-          <type href="http://ttc2020/model/2.0#//Person/age"/>
+        <attributes xmi:id="_-UCjUK1gEeqEBLCGMxk2aA" value="y">
+          <type href="http://ttc2020/model/scenario2/2.0#//Person/ybirth"/>
         </attributes>
       </nodes>
     </rhs>

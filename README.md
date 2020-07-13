@@ -61,6 +61,8 @@ The NMF solution is already precompiled in the repository. In order to run it, y
 
 In order to run the solution, you may either run the specific or the generic solution executable. Both of them require the same commandline arguments and are started similarly.
 
+### Windows
+
 For Windows, simply execute 
 ```
 solutions\nmf\GenericSolution\bin\Release\netcoreapp3.1\publish\TTC2020.Roundtrip.GenericNMFSolution.exe
@@ -71,7 +73,11 @@ This will give you an overview on the verbs that are supported by this solution.
 
 Please note that we had to adjust the namespace URI for the NMF solution such that each metamodel has its own namespace URI because NMF does not support different metamodels with the same namespace in the same process. The namespaces already had the version moniker (V1, V2) in them and we simply added the scenario moniker.
 
+### Linux
+
 For Linux, you cannot directly run the exe but instead, you have to run it using `dotnet`, passing the dll as argument, followed by the selected verb and file paths.
+
+A `Dockerfile` is available for this solution. To use it, run the `solutions/nmf/01-build-docker.sh` script. Once it has been built, you can run the image by running the `solutions/nmf/02-run-docker.sh` script. The built applications are available in `/app`, and `de.hub.mse.ttc2020.benchmark/data` will be mounted in `/data`.
 
 ## Fulib Solution
 
